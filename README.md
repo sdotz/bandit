@@ -1,4 +1,4 @@
-# Implementations of bandit algorithms
+# Implementations of bandit algorithms in Go
 
 ## Usage
 Pretend we have a site selling tools. On the homepage we feature an ad for one of our tool products, with a button to buy it.
