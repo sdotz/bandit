@@ -16,7 +16,7 @@ var tools := map[int]string{
 }
 
 //create the bandit, and initialize it with the number of arms
-bandit := ucb.NewUCB1(len(tools))
+bandit := NewUCB1(len(tools))
 
 //"pull" an arm to ask the bandit which tool to display. It returns an int that should correspond to one of your choices. 
 pulled := bandit.Pull()
