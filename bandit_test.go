@@ -4,9 +4,6 @@ import (
 	"testing"
 
 	"github.com/mroth/weightedrand/v2"
-	"github.com/sdotz/bandit/epsilon_greedy"
-	"github.com/sdotz/bandit/thompson_sampling"
-	"github.com/sdotz/bandit/ucb"
 )
 
 type ArmProbability struct {
@@ -31,7 +28,7 @@ func TestUCB1(t *testing.T) {
 		weightedrand.NewChoice(4, 5),
 	)
 
-	bandit := ucb.NewUCB1(5)
+	bandit := NewUCB1(5)
 
 	for i := 0; i < 1_000_000; i++ {
 		choice := chooser.Pick()
@@ -57,7 +54,7 @@ func TestEpsilonGreedy(t *testing.T) {
 		weightedrand.NewChoice(4, 5),
 	)
 
-	bandit := epsilon_greedy.NewEpsilonGreedy(5, epsilon_greedy.DefaultEpsilon)
+	bandit := NewEpsilonGreedy(5, DefaultEpsilon)
 
 	for i := 0; i < 1_000_000; i++ {
 		choice := chooser.Pick()
@@ -83,7 +80,7 @@ func TestThompsonSampling(t *testing.T) {
 		weightedrand.NewChoice(4, 5),
 	)
 
-	bandit := thompson_sampling.NewThompsonSampling(5)
+	bandit := NewThompsonSampling(5)
 
 	for i := 0; i < 1_000_000; i++ {
 		choice := chooser.Pick()

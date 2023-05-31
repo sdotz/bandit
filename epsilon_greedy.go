@@ -1,4 +1,4 @@
-package epsilon_greedy
+package bandit
 
 import "math/rand"
 

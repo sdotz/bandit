@@ -1,4 +1,4 @@
-package thompson_sampling
+package bandit
 
 import (
 	"time"

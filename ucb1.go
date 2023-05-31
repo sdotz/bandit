@@ -1,4 +1,4 @@
-package ucb
+package bandit
 
 import "math"
 
